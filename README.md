@@ -7,7 +7,9 @@ Our goal is to design and implement a database for Art Gallery
 ## Related Documentation:
 
 1. Art Gallery Entities:
-    https://docs.google.com/document/d/1v6Gq_sSOKGGMEpqRYJr8TGHbLmCQti-wvf6WCiK_PXk/edit?usp=sharing
+      
+        https://docs.google.com/document/d/1v6Gq_sSOKGGMEpqRYJr8TGHbLmCQti-wvf6WCiK_PXk/edit?usp=sharing
+        
 
 2. Entity Relationship Models(Draw.io):
     https://drive.google.com/file/d/0BwdKmj-LFNtsVHZkdFIya2VFeTg/view?usp=sharing
