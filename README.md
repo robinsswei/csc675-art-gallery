@@ -12,11 +12,16 @@ Our goal is to design and implement a database for Art Gallery
         
 
 2. Entity Relationship Models(Draw.io):
-    https://drive.google.com/file/d/0BwdKmj-LFNtsVHZkdFIya2VFeTg/view?usp=sharing
+
+        https://drive.google.com/file/d/0BwdKmj-LFNtsVHZkdFIya2VFeTg/view?usp=sharing
+        
 
 3. Schema Questions:
-    https://docs.google.com/document/d/1s-VJlZC8G0dGuDqyhZXDJAknv_b_2Ms35pdEQqJHHYM/edit?usp=sharing
+
+        https://docs.google.com/document/d/1s-VJlZC8G0dGuDqyhZXDJAknv_b_2Ms35pdEQqJHHYM/edit?usp=sharing
+        
 
 4. Art Database:
-   https://docs.google.com/spreadsheets/d/146k_O3FaNSe1jHu87RB_HWaiixjYOUhAVUap77D5jks/edit?usp=sharing
 
+        https://docs.google.com/spreadsheets/d/146k_O3FaNSe1jHu87RB_HWaiixjYOUhAVUap77D5jks/edit?usp=sharing
+        
