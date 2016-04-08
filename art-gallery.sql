@@ -5,9 +5,6 @@ SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 
--- -----------------------------------------------------
--- Schema art_gallery_schema
--- -----------------------------------------------------
 
 -- -----------------------------------------------------
 -- Schema art_gallery_schema
@@ -15,22 +12,15 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 CREATE SCHEMA IF NOT EXISTS `art_gallery_schema` DEFAULT CHARACTER SET utf8 ;
 USE `art_gallery_schema` ;
 
+
 -- -----------------------------------------------------
--- Table `art_gallery_schema`.`artist`
+-- Table `art_gallery_schema`.`country`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `art_gallery_schema`.`artist` (
-  `artist_id` INT(10) UNSIGNED NOT NULL,
-  `first_name` VARCHAR(45) NULL DEFAULT NULL,
-  `last_name` VARCHAR(45) NULL DEFAULT NULL,
-  `gender` ENUM('male', 'female') NULL DEFAULT NULL,
-  `status` ENUM('alive', 'dead') NULL DEFAULT NULL,
-  `country` VARCHAR(45) NULL DEFAULT NULL,
-  `age` SMALLINT(3) NULL DEFAULT NULL,
-  `background` TEXT NULL DEFAULT NULL,
-  `phone_no` VARCHAR(50) NULL DEFAULT NULL,
-  `email` VARCHAR(320) NULL DEFAULT NULL,
-  PRIMARY KEY (`artist_id`),
-  UNIQUE INDEX `artist_id_UNIQUE` (`artist_id` ASC))
+CREATE TABLE IF NOT EXISTS `art_gallery_schema`.`country` (
+  `country_id` INT(10) UNSIGNED NOT NULL auto_increment,
+  `country_code` varchar(2) NULL DEFAULT NULL,
+  `country_name` VARCHAR(50) NULL DEFAULT NULL,
+  PRIMARY KEY (`country_id`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
@@ -39,7 +29,7 @@ DEFAULT CHARACTER SET = utf8;
 -- Table `art_gallery_schema`.`image`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `art_gallery_schema`.`image` (
-  `img_id` INT(10) UNSIGNED NOT NULL,
+  `img_id` INT(10) UNSIGNED NOT NULL auto_increment,
   `src` TEXT NULL DEFAULT NULL,
   PRIMARY KEY (`img_id`),
   UNIQUE INDEX `img_id_UNIQUE` (`img_id` ASC))
@@ -48,21 +38,10 @@ DEFAULT CHARACTER SET = utf8;
 
 
 -- -----------------------------------------------------
--- Table `art_gallery_schema`.`country`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `art_gallery_schema`.`country` (
-  `country_id` INT(10) UNSIGNED NOT NULL,
-  `country_name` VARCHAR(50) NULL DEFAULT NULL,
-  PRIMARY KEY (`country_id`))
-ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8;
-
-
--- -----------------------------------------------------
 -- Table `art_gallery_schema`.`seller`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `art_gallery_schema`.`seller` (
-  `seller_id` INT(10) UNSIGNED NOT NULL,
+  `seller_id` INT(10) UNSIGNED NOT NULL auto_increment,
   `seller_type` ENUM('Person', 'Orangization') NULL DEFAULT NULL,
   `organization_name` VARCHAR(50) NULL DEFAULT NULL,
   `first_name` VARCHAR(20) NULL DEFAULT NULL,
@@ -81,19 +60,38 @@ CREATE TABLE IF NOT EXISTS `art_gallery_schema`.`seller` (
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
+-- -----------------------------------------------------
+-- Table `art_gallery_schema`.`artist`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `art_gallery_schema`.`artist` (
+  `artist_id` INT(10) UNSIGNED NOT NULL auto_increment,
+  `first_name` VARCHAR(45) NULL DEFAULT NULL,
+  `last_name` VARCHAR(45) NULL DEFAULT NULL,
+  `gender` ENUM('male', 'female') NULL DEFAULT NULL,
+  `status` ENUM('alive', 'dead') NULL DEFAULT NULL,
+  `country` VARCHAR(45) NULL DEFAULT NULL,
+  `age` SMALLINT(3) NULL DEFAULT NULL,
+  `background` TEXT NULL DEFAULT NULL,
+  `phone_no` VARCHAR(50) NULL DEFAULT NULL,
+  `email` VARCHAR(320) NULL DEFAULT NULL,
+  PRIMARY KEY (`artist_id`),
+  UNIQUE INDEX `artist_id_UNIQUE` (`artist_id` ASC))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
 
 -- -----------------------------------------------------
 -- Table `art_gallery_schema`.`artwork`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `art_gallery_schema`.`artwork` (
-  `artwork_id` INT(10) UNSIGNED NOT NULL,
+  `artwork_id` INT(10) UNSIGNED NOT NULL auto_increment,
   `title` TEXT NULL DEFAULT NULL,
   `price` FLOAT NULL DEFAULT NULL,
   `date` DATETIME NULL DEFAULT NULL,
   `descprition` TEXT NULL DEFAULT NULL,
   `period` VARCHAR(256) NULL DEFAULT NULL,
   `edition` INT(11) NULL DEFAULT NULL,
-  `type` VARCHAR(45) NULL DEFAULT NULL,
+  `medium` VARCHAR(45) NULL DEFAULT NULL,
   `size` VARCHAR(45) NULL DEFAULT NULL,
   `authentic` ENUM('yes', 'no') NULL DEFAULT NULL,
   `stock` INT(11) NULL DEFAULT NULL,
@@ -115,7 +113,7 @@ DEFAULT CHARACTER SET = utf8;
 -- Table `art_gallery_schema`.`artwork_artist_map`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `art_gallery_schema`.`artwork_artist_map` (
-  `artwork_artist_id` INT(10) UNSIGNED NOT NULL,
+  `artwork_artist_id` INT(10) UNSIGNED NOT NULL auto_increment,
   `artwork_id` INT(10) UNSIGNED NOT NULL,
   `artist_id` INT(10) UNSIGNED NOT NULL,
   PRIMARY KEY (`artwork_artist_id`),
@@ -134,7 +132,7 @@ DEFAULT CHARACTER SET = utf8;
 -- Table `art_gallery_schema`.`artwork_image_map`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `art_gallery_schema`.`artwork_image_map` (
-  `artwork_image_id` INT(10) UNSIGNED NOT NULL,
+  `artwork_image_id` INT(10) UNSIGNED NOT NULL auto_increment,
   `artwork_id` INT(10) UNSIGNED NOT NULL,
   `image_id` INT(10) UNSIGNED NOT NULL,
   PRIMARY KEY (`artwork_image_id`),
@@ -153,7 +151,7 @@ DEFAULT CHARACTER SET = utf8;
 -- Table `art_gallery_schema`.`artwork_seller_map`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `art_gallery_schema`.`artwork_seller_map` (
-  `artwork_seller_id` INT(10) UNSIGNED NOT NULL,
+  `artwork_seller_id` INT(10) UNSIGNED NOT NULL auto_increment,
   `artwork_id` INT(10) UNSIGNED NOT NULL,
   `seller_id` INT(10) UNSIGNED NOT NULL,
   PRIMARY KEY (`artwork_seller_id`),

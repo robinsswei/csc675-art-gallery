@@ -29,3 +29,10 @@ Our goal is to design and implement a database for Art Gallery
 
         https://docs.google.com/spreadsheets/d/146k_O3FaNSe1jHu87RB_HWaiixjYOUhAVUap77D5jks/edit?usp=sharing
         
+        artwork 30
+        artist at most 30
+        seller 10
+        image
+        country DONE
+        
+        
