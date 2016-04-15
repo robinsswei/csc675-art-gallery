@@ -37,6 +37,10 @@ Our goal is to design and implement a database for Art Gallery
         
         
 6. Useful tutorial
-      https://www.youtube.com/watch?v=EL39BGSUkzw
+      
+        https://www.youtube.com/watch?v=EL39BGSUkzw
         
+7. Result Data Export and Import
+
+        https://dev.mysql.com/doc/workbench/en/wb-admin-export-import-results.html
         
