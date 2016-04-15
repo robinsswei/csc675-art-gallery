@@ -36,3 +36,7 @@ Our goal is to design and implement a database for Art Gallery
         country DONE
         
         
+6. Useful tutorial
+      https://www.youtube.com/watch?v=EL39BGSUkzw
+        
+        
