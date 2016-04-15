@@ -36,7 +36,7 @@ Our goal is to design and implement a database for Art Gallery
         country DONE
         
         
-6. Useful tutorial
+6. Creating and Querying a Database Schema with MySQL Workbench(Video tutorial)
       
         https://www.youtube.com/watch?v=EL39BGSUkzw
         
