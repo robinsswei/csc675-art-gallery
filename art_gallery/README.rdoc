@@ -3,13 +3,14 @@
 0. Set up for the Environment
 
    Prerequisites:
-	   Install Ruby version: 2.3.0
-	   Install Rails version: 4.2.6
-	   Install Bundle by running the command:
-	   	$ gem install bundler
+   
+	- Install Ruby version: 2.3.0
+	- Install Rails version: 4.2.6
+	- Install Bundle by running the command:
+	   $ gem install bundler
 
    Install and setup PostgreSQL
-   - Create Database User: pguser and password: pguser
+   	- Create Database User: pguser and password: pguser
 
 1. Create a new Ruby on Rails Application on Postgres Database
 
@@ -29,7 +30,9 @@
    If all goes well, you should should be able to run the command:
 
    $rails dbconsole
+   
    =# \dt
+   
 
 == Some useful commands
 
