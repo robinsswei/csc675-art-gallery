@@ -1,6 +1,7 @@
 == README
 
 0. Set up for the Environment
+
    Prerequisites:
 	- Install Ruby version: 2.3.0
 	- Install Rails version: 4.2.6
@@ -28,7 +29,6 @@
    If all goes well, you should should be able to run the command:
 
    $rails dbconsole
-   => \dt
    
 
 == Some useful commands
@@ -36,8 +36,6 @@
 To delete the content of a table and reset the primary key of a table:
 
 	$ rails console
-	
 	>>> ModelName.delete_all
-	
 	>>> ActiveRecord::Base.connection.reset_pk_sequence!('table_name')
 	
