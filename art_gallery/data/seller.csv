@@ -1,0 +1,13 @@
+seller_type,organization_name,first_name,last_name,phone_number,address,email,country
+Person,,Jimmy,He,,,,236
+Organization,The Great Highway Gallery,,,(415) 680-3891,"3649 Lawton St, San Francisco, CA 94122",info@thegreathighway.com,236
+Person,,Robin,Wei,,"123 25th Ave, China",robinsswei@gmail.com,46
+Person,,Christopher,Dea,(707) 570-5369,"777 Ice Street, Portland, OR, 97045",cdea@mail.sfsu.edu,236
+Organization,Oriental Art Gallery,,,(415) 681-6448,"1340 9th Ave, San Francisco, CA 94122",,236
+Organization,Cherry Art Studio,,,(415) 661-1104,"1444 Taraval Street, San Francisco, CA 94116",,236
+Person,,JoAnne,Strickland,,,,235
+Organization,Honey Hive Gallery,,,(612) 888-4483,"4117 Judah Street, San Francisco, CA 94122",honeyhivegaller@gmail.com,236
+Organization,Creativity Explored,,,(415) 863-2108,"3245 16th Street, San Francisco, CA 94103",info@creativityexplored.org,236
+Person,,John,Doe,(123) 456-7890,"123 Smith Street, SanJose, CA ",,236
+Organization,Conduit Gallery,,,(214) 939-0064,"1626 Hi Line Dr # C, Dallas, TX",,236
+Organization,Art 3 Gallery,,,(646) 331-3162,"109 Ingraham St. Brooklyn, NY 11237",silas@art-3gallery.com,236
