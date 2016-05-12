@@ -1,9 +1,8 @@
 # require 'csv-mapper'
 
 class Image < ActiveRecord::Base
+	belongs_to :artwork_image_map
 end
-
-# 1. Loading data into table, please remember only load once
 
 # include CsvMapper
 # results = import('data/image.csv') do

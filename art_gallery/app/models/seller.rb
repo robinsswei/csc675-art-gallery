@@ -1,14 +1,9 @@
 # require 'csv-mapper'
 
 class Seller < ActiveRecord::Base
-	has_many :countries
-	validates :seller_type,  presence: true, length: { maximum: 50 }
-
-	VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
-  	validates :email, length: { maximum: 255 }, format: { with: VALID_EMAIL_REGEX }
+  has_one :country
+  has_many :artworks, :through => :artwork_seller_map
 end
-
-# 1. Loading data into table, please remember only load once
 
 # include CsvMapper
 # results = import('data/seller.csv') do

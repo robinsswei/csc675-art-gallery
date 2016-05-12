@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  price: 9.99
+  date: 2016-05-11
+  description: MyString
+  period: MyString
+  edition: 1
+  medium: MyString
+  size: MyString
+  authentic: false
+  stock: 1
+  subject: MyString
+  artwork_artist_map_id: 
+  artwork_seller_map_id: 
+  artwork_image_map_id: 
+
+two:
+  title: MyString
+  price: 9.99
+  date: 2016-05-11
+  description: MyString
+  period: MyString
+  edition: 1
+  medium: MyString
+  size: MyString
+  authentic: false
+  stock: 1
+  subject: MyString
+  artwork_artist_map_id: 
+  artwork_seller_map_id: 
+  artwork_image_map_id: 

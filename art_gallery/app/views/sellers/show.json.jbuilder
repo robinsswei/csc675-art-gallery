@@ -1,1 +1,1 @@
-json.extract! @seller, :id, :seller_type, :organization_name, :first_name, :last_name, :address, :email, :country_id, :created_at, :updated_at
+json.extract! @seller, :id, :type, :organization, :first_name, :last_name, :phone_number, :address, :email, :country_id, :created_at, :updated_at

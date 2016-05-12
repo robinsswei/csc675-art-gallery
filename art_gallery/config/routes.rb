@@ -1,12 +1,14 @@
 Rails.application.routes.draw do
-
-  resources :sellers
+  resources :artworks
+  resources :artwork_image_maps
+  resources :artwork_seller_maps
+  resources :artwork_artist_maps
   resources :artists
+  resources :sellers
   resources :countries
   resources :images
 
-  # This part will be changed to artwork#index
-  # root 'images#index'
+  root 'artworks#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

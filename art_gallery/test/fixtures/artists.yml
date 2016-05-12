@@ -5,8 +5,8 @@ one:
   last_name: MyString
   gender: MyString
   status: MyString
-  country_id: 1
-  date_of_birth: 2016-05-09
+  country_id: 
+  date_of_birth: 2016-05-11
   background: MyText
   phone_number: MyString
   email: MyString
@@ -16,8 +16,8 @@ two:
   last_name: MyString
   gender: MyString
   status: MyString
-  country_id: 1
-  date_of_birth: 2016-05-09
+  country_id: 
+  date_of_birth: 2016-05-11
   background: MyText
   phone_number: MyString
   email: MyString

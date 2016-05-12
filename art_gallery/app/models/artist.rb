@@ -1,10 +1,8 @@
 # require 'csv-mapper'
 
 class Artist < ActiveRecord::Base
-	has_many :countries
-
-	VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
-  	validates :email, length: { maximum: 255 }, format: { with: VALID_EMAIL_REGEX }
+  has_one :country
+  has_many :artworks, :through => :artwork_artist_map
 end
 
 # include CsvMapper

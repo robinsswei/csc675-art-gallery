@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<%= link_to 'New Artwork artist map', new_artwork_artist_map_path %>
+
+<h1>Listing Artwork Artist Maps</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Artwork ID</th>
+      <th>Artist ID</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @artwork_artist_maps.each do |artwork_artist_map| %>
+      <tr>
+        <td><%= artwork_artist_map.id %></td>
+        <td><%= artwork_artist_map.artwork_id %></td>
+        <td><%= artwork_artist_map.artist_id %></td>
+        <td><%= link_to 'Show', artwork_artist_map %></td>
+        <td><%= link_to 'Edit', edit_artwork_artist_map_path(artwork_artist_map) %></td>
+        <td><%= link_to 'Destroy', artwork_artist_map, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+

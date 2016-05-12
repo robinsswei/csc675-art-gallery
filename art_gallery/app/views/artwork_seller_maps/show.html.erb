@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>ID:</strong>
+  <%= @artwork_seller_map.id %>
+</p>
+
+<p>
+  <strong>Artwork:</strong>
+  <%= @artwork_seller_map.artwork_id %>
+</p>
+
+<p>
+  <strong>Seller:</strong>
+  <%= @artwork_seller_map.seller_id %>
+</p>
+
+<%= link_to 'Edit', edit_artwork_seller_map_path(@artwork_seller_map) %> |
+<%= link_to 'Back', artwork_seller_maps_path %>

@@ -11,5 +11,5 @@ end
 #   after_row lambda{|row, country| country.save }  # Call this lambda and save each record after it's parsed.
 
 #   start_at_row 1
-#   [country_name]
+#   [name]
 # end
