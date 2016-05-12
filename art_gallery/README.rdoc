@@ -27,3 +27,9 @@ To delete the content of a table and reset the primary key of a table:
 	>>> ModelName.delete_all
 	>>> ActiveRecord::Base.connection.reset_pk_sequence!('table_name')
 
+== Useful Tutorails
+
+   https://www.railstutorial.org/book/following_users#cha-following_users
+   
+   
+
