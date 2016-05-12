@@ -1,0 +1,25 @@
+<%= form_for(@artwork_image_map) do |f| %>
+  <% if @artwork_image_map.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@artwork_image_map.errors.count, "error") %> prohibited this artwork_image_map from being saved:</h2>
+
+      <ul>
+      <% @artwork_image_map.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :artwork_id %><br>
+    <%= f.number_field :artwork_id %>
+  </div>
+  <div class="field">
+    <%= f.label :image_id %><br>
+    <%= f.text_field :image_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

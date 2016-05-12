@@ -1,0 +1,79 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>ID:</strong>
+  <%= @artwork.id %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @artwork.title %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @artwork.price %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @artwork.date %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @artwork.description %>
+</p>
+
+<p>
+  <strong>Period:</strong>
+  <%= @artwork.period %>
+</p>
+
+<p>
+  <strong>Edition:</strong>
+  <%= @artwork.edition %>
+</p>
+
+<p>
+  <strong>Medium:</strong>
+  <%= @artwork.medium %>
+</p>
+
+<p>
+  <strong>Size:</strong>
+  <%= @artwork.size %>
+</p>
+
+<p>
+  <strong>Authentic:</strong>
+  <%= @artwork.authentic %>
+</p>
+
+<p>
+  <strong>Stock:</strong>
+  <%= @artwork.stock %>
+</p>
+
+<p>
+  <strong>Subject:</strong>
+  <%= @artwork.subject %>
+</p>
+
+<p>
+  <strong>Artwork artist map:</strong>
+  <%= @artwork.artwork_artist_map_id %>
+</p>
+
+<p>
+  <strong>Artwork seller map:</strong>
+  <%= @artwork.artwork_seller_map_id %>
+</p>
+
+<p>
+  <strong>Artwork image map:</strong>
+  <%= @artwork.artwork_image_map_id %>
+</p>
+
+<%= link_to 'Edit', edit_artwork_path(@artwork) %> |
+<%= link_to 'Back', artworks_path %>

@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+
+<%= link_to 'New Artwork seller map', new_artwork_seller_map_path %>
+
+<h1>Listing Artwork Seller Maps</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Artwork ID</th>
+      <th>Seller ID</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @artwork_seller_maps.each do |artwork_seller_map| %>
+      <tr>
+        <td><%= artwork_seller_map.id %></td>
+        <td><%= artwork_seller_map.artwork_id %></td>
+        <td><%= artwork_seller_map.seller_id %></td>
+        <td><%= link_to 'Show', artwork_seller_map %></td>
+        <td><%= link_to 'Edit', edit_artwork_seller_map_path(artwork_seller_map) %></td>
+        <td><%= link_to 'Destroy', artwork_seller_map, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+

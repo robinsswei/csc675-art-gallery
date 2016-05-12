@@ -1,0 +1,2 @@
+module ArtworkSellerMapsHelper
+end

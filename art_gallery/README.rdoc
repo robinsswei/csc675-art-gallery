@@ -1,0 +1,29 @@
+== README
+
+This README would normally document whatever steps are necessary to get the
+application up and running.
+
+   Prerequisites:
+	- Install Ruby version: 2.3.0
+	- Install Rails version: 4.2.6
+	- Install Bundle by running the command:
+	   $ gem install bundler
+
+   Install and setup PostgreSQL:
+   	- Create Database User: pguser and password: pguser
+
+
+Please feel free to use a different markup language if you do not plan to run
+<tt>rake doc:app</tt>.
+
+   $rails dbconsole
+   
+
+== Some useful commands
+
+To delete the content of a table and reset the primary key of a table:
+
+	$ rails console
+	>>> ModelName.delete_all
+	>>> ActiveRecord::Base.connection.reset_pk_sequence!('table_name')
+

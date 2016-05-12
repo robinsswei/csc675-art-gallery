@@ -42,7 +42,7 @@ DEFAULT CHARACTER SET = utf8;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `art_gallery_schema`.`seller` (
   `seller_id` INT(10) UNSIGNED NOT NULL auto_increment,
-  `seller_type` ENUM('Person', 'Orangization') NULL DEFAULT NULL,
+  `seller_type` ENUM('Person', 'Organization') NULL DEFAULT NULL,
   `organization_name` VARCHAR(50) NULL DEFAULT NULL,
   `first_name` VARCHAR(20) NULL DEFAULT NULL,
   `last_name` VARCHAR(20) NULL DEFAULT NULL,
@@ -70,7 +70,7 @@ CREATE TABLE IF NOT EXISTS `art_gallery_schema`.`artist` (
   `gender` ENUM('male', 'female') NULL DEFAULT NULL,
   `status` ENUM('alive', 'dead') NULL DEFAULT NULL,
   `country` VARCHAR(45) NULL DEFAULT NULL,
-  `age` SMALLINT(3) NULL DEFAULT NULL,
+  `date_of_birth` DATE NULL,
   `background` TEXT NULL DEFAULT NULL,
   `phone_no` VARCHAR(50) NULL DEFAULT NULL,
   `email` VARCHAR(320) NULL DEFAULT NULL,
@@ -86,7 +86,7 @@ DEFAULT CHARACTER SET = utf8;
 CREATE TABLE IF NOT EXISTS `art_gallery_schema`.`artwork` (
   `artwork_id` INT(10) UNSIGNED NOT NULL auto_increment,
   `title` TEXT NULL DEFAULT NULL,
-  `price` FLOAT NULL DEFAULT NULL,
+  `price` INT(15) NULL DEFAULT NULL,
   `date` DATETIME NULL DEFAULT NULL,
   `descprition` TEXT NULL DEFAULT NULL,
   `period` VARCHAR(256) NULL DEFAULT NULL,
@@ -95,7 +95,6 @@ CREATE TABLE IF NOT EXISTS `art_gallery_schema`.`artwork` (
   `size` VARCHAR(45) NULL DEFAULT NULL,
   `authentic` ENUM('yes', 'no') NULL DEFAULT NULL,
   `stock` INT(11) NULL DEFAULT NULL,
-  `origin` TEXT NULL DEFAULT NULL,
   `subject` VARCHAR(50) NULL DEFAULT NULL,
   `artwork_artist_id` INT(10) UNSIGNED NOT NULL,
   `artwork_seller_id` INT(10) UNSIGNED NOT NULL,
