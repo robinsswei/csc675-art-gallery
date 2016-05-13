@@ -1,0 +1,17 @@
+rails g scaffold Image src:string
+
+rails g scaffold Country name:string
+
+rails g scaffold Seller seller_type:string organization_name:string first_name:string last_name:string phone_number:string address:string email:string country:references
+
+rails g scaffold Artist first_name:string last_name:string gender:string status:string country:references date_of_birth:date background:text phone_number:string email:string  
+
+rails g scaffold ArtworkArtistMap artwork_id:integer artist:references
+
+rails g scaffold ArtworkSellerMap artwork_id:integer seller:references
+
+rails g scaffold ArtworkImageMap artwork_id:integer image:references
+
+rails g scaffold Artwork title:string price:decimal date:date description:string period:string edition:integer medium:string size:string authentic:boolean stock:integer subject:string artwork_artist_map:references artwork_seller_map:references artwork_image_map:references
+
+bundle exec rake db:migrate
