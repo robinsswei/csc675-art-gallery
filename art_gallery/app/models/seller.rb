@@ -3,6 +3,9 @@
 class Seller < ActiveRecord::Base
   has_one :country
   has_many :artworks, :through => :artwork_seller_map
+
+  # enum type: [:Person, :Organization]
+  # validate :seller_type, inclusion: { in: Seller.type.keys }
 end
 
 # include CsvMapper

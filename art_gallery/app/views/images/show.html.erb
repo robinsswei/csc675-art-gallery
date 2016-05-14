@@ -10,5 +10,10 @@
   <%= @image.src %>
 </p>
 
+<h1>
+  <%= gravatar_for @image %>
+  <%= @image.src %>
+</h1>
+
 <%= link_to 'Edit', edit_image_path(@image) %> |
 <%= link_to 'Back', images_path %>

@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  root 'art_gallery#home'
 
-  get 'art_gallery/home'
-  get 'art_gallery/help'
-  get 'art_gallery/about'
+  root 'artworks#index'
+
+  get 'help'  => 'artworks#help'
+  get 'about' => 'artworks#about'
 
   resources :artworks
   resources :artwork_image_maps

@@ -10,6 +10,7 @@ class ArtworksController < ApplicationController
   # GET /artworks/1
   # GET /artworks/1.json
   def show
+    @artwork = Artwork.find(params[:id])
   end
 
   # GET /artworks/new
@@ -21,6 +22,12 @@ class ArtworksController < ApplicationController
   def edit
   end
 
+  def help
+  end
+
+  def about
+  end
+  
   # POST /artworks
   # POST /artworks.json
   def create
