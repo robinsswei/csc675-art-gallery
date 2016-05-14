@@ -2,10 +2,19 @@
 
 class Seller < ActiveRecord::Base
   has_one :country
+
+  has_many :artwork_artist_map
   has_many :artworks, :through => :artwork_seller_map
 
+  # validation
   # enum type: [:Person, :Organization]
   # validate :seller_type, inclusion: { in: Seller.type.keys }
+  
+  validates :first_name,  presence: true, length: { maximum: 50 }
+  validates :last_name,  presence: true, length: { maximum: 50 }
+  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+  validates :email, presence: true, length: { maximum: 255 },
+                    format: { with: VALID_EMAIL_REGEX }
 end
 
 # include CsvMapper

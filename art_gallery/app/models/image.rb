@@ -2,6 +2,8 @@
 
 class Image < ActiveRecord::Base
 	belongs_to :artwork_image_map
+
+  validates :src,  presence: true
 end
 
 # include CsvMapper

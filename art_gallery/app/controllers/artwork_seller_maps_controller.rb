@@ -4,7 +4,7 @@ class ArtworkSellerMapsController < ApplicationController
   # GET /artwork_seller_maps
   # GET /artwork_seller_maps.json
   def index
-    @artwork_seller_maps = ArtworkSellerMap.all
+    @artwork_seller_maps = ArtworkSellerMap.order("id ASC").all
   end
 
   # GET /artwork_seller_maps/1

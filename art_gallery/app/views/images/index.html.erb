@@ -3,7 +3,6 @@
 <%= link_to 'New Image', new_image_path %>
 
 <h1>Listing Images</h1>
-
 <table>
   <thead>
     <tr>
@@ -26,6 +25,7 @@
   </tbody>
 </table>
 
-<br>
+<%= will_paginate @images %>
+
 
 

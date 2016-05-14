@@ -4,7 +4,8 @@ class SellersController < ApplicationController
   # GET /sellers
   # GET /sellers.json
   def index
-    @sellers = Seller.all
+    # @sellers = Seller.all
+    @sellers = Seller.order("id ASC").paginate(:page => params[:page], :per_page => 10)
   end
 
   # GET /sellers/1

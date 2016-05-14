@@ -9,21 +9,14 @@
 
 </div>
 
+<%= will_paginate @artworks %>
+
 <div class="container" id="gallery">
   <div class="row">
     <% @artworks.each do |artwork| %>
-      <div class="col-md-3 col-sm-4 col-xs-6">
-        <div class="hovereffect">
-          <%= link_to artwork do %>
-            <%= image_tag("dummy.png", class: "img-responsive") %>
-            <div class="overlay">
-              <!-- <h2>Artist Name</h2> -->
-              <p class="icon-links"><%= artwork.title %></p>
-            </div>
-          <% end %>
-        </div>
-      </div>
+      <%= render artwork %>
     <% end %>
   </div>
-
 </div>
+
+<%= will_paginate @artworks %>
