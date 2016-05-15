@@ -29,12 +29,6 @@ Our goal is to design and implement a database for Art Gallery
 
         https://docs.google.com/spreadsheets/d/146k_O3FaNSe1jHu87RB_HWaiixjYOUhAVUap77D5jks/edit?usp=sharing
         
-        artwork 30
-        artist at most 30
-        seller 10
-        image
-        country DONE
-        
         
 6. Creating and Querying a Database Schema with MySQL Workbench(Video tutorial)
       
@@ -43,4 +37,15 @@ Our goal is to design and implement a database for Art Gallery
 7. Result Data Export and Import
 
         https://dev.mysql.com/doc/workbench/en/wb-admin-export-import-results.html
+
+8. Related Questions(new)
+
+        https://docs.google.com/document/d/1IhvZDX8JWB9UaiKCEGblSS0jiF-Sc2FwGOyvofDdwcY/edit?usp=sharing
+
+
+9. Final Presentation(new)
+
+        https://docs.google.com/presentation/d/1eDeIZkBm8_R3GKd7Wv9F1TocU4HJexEetxUs761lq1Y/edit?usp=sharing
+
+        
         
