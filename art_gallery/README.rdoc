@@ -6,9 +6,9 @@
     - Install Ruby version: 2.3.0
     - Install Rails version: 4.2.6
 
-1. Tutorail Book
+1. Tutorial 
 
-    https://www.railstutorial.org/book/following_users
-    
+  Book:
+    - https://www.railstutorial.org/book/following_users
 
 2. Useful Commands -> useful commands.txt
