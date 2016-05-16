@@ -3,21 +3,25 @@
 class Artist < ActiveRecord::Base
   has_one :country
 
-  has_many :artwork_artist_map
-  has_many :artworks, :through => :artwork_artist_map
+  has_many :artwork_artist_maps
+  has_many :artworks, :through => :artwork_artist_maps
 
   # validation
-  validates :first_name,  presence: true, length: { maximum: 50 }
-  validates :last_name,  presence: true, length: { maximum: 50 }
+  # validates :first_name,  presence: true, length: { maximum: 50 }
+  # validates :last_name,  presence: true, length: { maximum: 50 }
 
   # enum gender: [:male, :female]
   # validate :gender, inclusion: { in: Artist.gender.keys }
   # enum status: [:dead, :alive]
   # validate :status, inclusion: { in: Artist.status.keys }
 
-  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
-  validates :email, presence: true, length: { maximum: 255 },
-                    format: { with: VALID_EMAIL_REGEX }
+  # VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+  # validates :email, presence: true, length: { maximum: 255 },
+  #                   format: { with: VALID_EMAIL_REGEX }
+  
+  def fullname
+    fullname = self.first_name.to_s + " " + self.last_name.to_s;
+  end
 end
 
 # include CsvMapper

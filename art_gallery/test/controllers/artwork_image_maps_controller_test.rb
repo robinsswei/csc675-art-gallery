@@ -18,7 +18,7 @@ class ArtworkImageMapsControllerTest < ActionController::TestCase
 
   test "should create artwork_image_map" do
     assert_difference('ArtworkImageMap.count') do
-      post :create, artwork_image_map: { artwork: @artwork_image_map.artwork, image_id: @artwork_image_map.image_id }
+      post :create, artwork_image_map: { artwork_id: @artwork_image_map.artwork_id, image_id: @artwork_image_map.image_id }
     end
 
     assert_redirected_to artwork_image_map_path(assigns(:artwork_image_map))
@@ -35,7 +35,7 @@ class ArtworkImageMapsControllerTest < ActionController::TestCase
   end
 
   test "should update artwork_image_map" do
-    patch :update, id: @artwork_image_map, artwork_image_map: { artwork: @artwork_image_map.artwork, image_id: @artwork_image_map.image_id }
+    patch :update, id: @artwork_image_map, artwork_image_map: { artwork_id: @artwork_image_map.artwork_id, image_id: @artwork_image_map.image_id }
     assert_redirected_to artwork_image_map_path(assigns(:artwork_image_map))
   end
 

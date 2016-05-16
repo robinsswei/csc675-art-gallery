@@ -3,33 +3,26 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
-   Prerequisites:
-	- Install Ruby version: 2.3.0
-	- Install Rails version: 4.2.6
-	- Install Bundle by running the command:
-	   $ gem install bundler
+Things you may want to cover:
 
-   Install and setup PostgreSQL:
-   	- Create Database User: pguser and password: pguser
+* Ruby version
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
 
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
-
-   $rails dbconsole
-   
-
-== Some useful commands
-
-To delete the content of a table and reset the primary key of a table:
-
-	$ rails console
-	>>> ModelName.delete_all
-	>>> ActiveRecord::Base.connection.reset_pk_sequence!('table_name')
-
-== Useful Tutorails
-
-   https://www.railstutorial.org/book/following_users#cha-following_users
-   
-   
-

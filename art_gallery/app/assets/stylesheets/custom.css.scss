@@ -260,3 +260,32 @@ input {
   transition-delay: 0.2s;
 }
 
+/* tables */
+table th{
+  text-align: center;
+}
+
+.fixed td:nth-child(5){
+  max-width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  height: 80px;
+}
+
+.fixed td:nth-child(8){
+  max-width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  height: 80px;
+}
+
+.newBtn {
+  margin-top:35px;
+  padding-left:50px;
+}
+
+.newBtn a:visited{
+  color: white;
+}

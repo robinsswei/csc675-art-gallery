@@ -78,6 +78,26 @@
   <strong>Artwork image map:</strong>
   <%= @artwork.artwork_image_map_id %>
 </p>
+<br>
+<br>
+<p>
+  <strong>-----------  Associations -----------</strong>
+</p>
+
+<p>
+  <strong>Artists:</strong>
+  <%= get_artists @artwork %>
+</p>
+
+<p>
+  <strong>Sellers:</strong>
+  <%= get_sellers @artwork %>
+</p>
+
+<p>
+  <strong>Images:</strong>
+  <%= get_images @artwork %>
+</p>
 
 <%= link_to 'Edit', edit_artwork_path(@artwork) %> |
 <%= link_to 'Back', artworks_path %>

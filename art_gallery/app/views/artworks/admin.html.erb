@@ -1,0 +1,32 @@
+<h1>Admin</h1>
+
+<div class="table-responsive">
+  <table class="table table-bordered fixed">
+   <thead>
+      <tr>
+        <th>General Tables</th>
+        <th>Maps Tables</th>
+        <th>Other Tables</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>
+            <%= link_to 'Artworks Table','/artworks' %><br>
+            <%= link_to 'Artists Table','/artists' %><br>
+            <%= link_to 'Sellers Table','/sellers' %>
+        </td>
+        <td>
+            <%= link_to 'Artwork Artist Maps Table','/artwork_artist_maps'%><br>
+            <%= link_to 'Artwork Seller Maps Table','/artwork_seller_maps' %><br>
+            <%= link_to 'Artwork Image Maps Table','/artwork_image_maps' %>
+        </td>
+        <td>
+          <%= link_to 'Images Table','/images' %><br>
+          <%= link_to 'Countries Table','/countries' %>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

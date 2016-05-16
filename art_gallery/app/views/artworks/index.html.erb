@@ -1,22 +1,65 @@
 <p id="notice"><%= notice %></p>
 
-<div class="center jumbotron">
-  <h1>Welcome to the Art Gallery</h1>
+<h1>Artwork Table</h1>
 
-  <h2>
-    This is the home page for the Art Gallery
-  </h2>
-
-</div>
-
-<%= will_paginate @artworks %>
-
-<div class="container" id="gallery">
+<div class="container">
   <div class="row">
-    <% @artworks.each do |artwork| %>
-      <%= render artwork %>
-    <% end %>
+    <div class="col-md-8 col-sm-8">
+      <%= will_paginate @artworks %>
+    </div>
+    <div class="col-md-4 col-sm-4 newBtn">
+      <%= link_to 'Create a New Artwork', new_artwork_path, :class=>"btn btn-primary"%>
+    </div>
   </div>
 </div>
 
+<div class="table-responsive">
+  <table class="table table-bordered fixed">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Price</th>
+        <th>Date</th>
+        <th>Description</th>
+        <th>Period</th>
+        <th>Edition</th>
+        <th>Medium</th>
+        <th>Size</th>
+        <th>Authentic</th>
+        <th>Stock</th>
+        <th>Subject</th>
+        <th>Artwork_artist_map</th>
+        <th>Artwork_seller_map</th>
+        <th>Artwork_image_map</th>
+        <th colspan="3">Operations</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @artworks.each do |artwork| %>
+        <tr>
+          <td><%= artwork.id %></td>
+          <td><%= artwork.title %></td>
+          <td><%= artwork.price %></td>
+          <td><%= artwork.date %></td>
+          <td><%= artwork.description %></td>
+          <td><%= artwork.period %></td>
+          <td><%= artwork.edition %></td>
+          <td><%= artwork.medium %></td>
+          <td><%= artwork.size %></td>
+          <td><%= artwork.authentic %></td>
+          <td><%= artwork.stock %></td>
+          <td><%= artwork.subject %></td>
+          <td><%= artwork.artwork_artist_map_id %></td>
+          <td><%= artwork.artwork_seller_map_id %></td>
+          <td><%= artwork.artwork_image_map_id %></td>
+          <td><%= link_to 'Show', artwork %></td>
+          <td><%= link_to 'Edit', edit_artwork_path(artwork) %></td>
+          <td><%= link_to 'Destroy', artwork, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
 <%= will_paginate @artworks %>

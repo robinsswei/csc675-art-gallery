@@ -3,7 +3,7 @@
 one:
   title: MyString
   price: 9.99
-  date: 2016-05-11
+  date: 2016-05-16
   description: MyString
   period: MyString
   edition: 1
@@ -19,7 +19,7 @@ one:
 two:
   title: MyString
   price: 9.99
-  date: 2016-05-11
+  date: 2016-05-16
   description: MyString
   period: MyString
   edition: 1

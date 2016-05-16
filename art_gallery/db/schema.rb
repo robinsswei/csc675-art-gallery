@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160513002136) do
+ActiveRecord::Schema.define(version: 20160516201703) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -111,10 +111,7 @@ ActiveRecord::Schema.define(version: 20160513002136) do
 
   add_foreign_key "artists", "countries"
   add_foreign_key "artwork_artist_maps", "artists"
-  add_foreign_key "artwork_artist_maps", "artworks"
-  add_foreign_key "artwork_image_maps", "artworks"
   add_foreign_key "artwork_image_maps", "images"
-  add_foreign_key "artwork_seller_maps", "artworks"
   add_foreign_key "artwork_seller_maps", "sellers"
   add_foreign_key "artworks", "artwork_artist_maps"
   add_foreign_key "artworks", "artwork_image_maps"

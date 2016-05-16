@@ -18,7 +18,7 @@ class ArtworkSellerMapsControllerTest < ActionController::TestCase
 
   test "should create artwork_seller_map" do
     assert_difference('ArtworkSellerMap.count') do
-      post :create, artwork_seller_map: { artwork: @artwork_seller_map.artwork, seller_id: @artwork_seller_map.seller_id }
+      post :create, artwork_seller_map: { artwork_id: @artwork_seller_map.artwork_id, seller_id: @artwork_seller_map.seller_id }
     end
 
     assert_redirected_to artwork_seller_map_path(assigns(:artwork_seller_map))
@@ -35,7 +35,7 @@ class ArtworkSellerMapsControllerTest < ActionController::TestCase
   end
 
   test "should update artwork_seller_map" do
-    patch :update, id: @artwork_seller_map, artwork_seller_map: { artwork: @artwork_seller_map.artwork, seller_id: @artwork_seller_map.seller_id }
+    patch :update, id: @artwork_seller_map, artwork_seller_map: { artwork_id: @artwork_seller_map.artwork_id, seller_id: @artwork_seller_map.seller_id }
     assert_redirected_to artwork_seller_map_path(assigns(:artwork_seller_map))
   end
 

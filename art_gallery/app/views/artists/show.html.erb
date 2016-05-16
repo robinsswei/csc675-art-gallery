@@ -26,10 +26,14 @@
 </p>
 
 <p>
-  <strong>Country:</strong>
+  <strong>Country ID:</strong>
   <%= @artist.country_id %>
 </p>
 
+<p>
+  <strong>Country Name:</strong>
+  <%= get_country_name @artist.country_id %>
+</p>
 <p>
   <strong>Date of birth:</strong>
   <%= @artist.date_of_birth %>

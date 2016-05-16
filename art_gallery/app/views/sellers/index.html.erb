@@ -1,45 +1,57 @@
 <p id="notice"><%= notice %></p>
 
-<%= link_to 'New Seller', new_seller_path %>
 
-<h1>Listing Sellers</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>ID</th>
-      <th>Type</th>
-      <th>Organization</th>
-      <th>First name</th>
-      <th>Last name</th>
-      <th>Phone number</th>
-      <th>Address</th>
-      <th>Email</th>
-      <th>Country</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<h1>Sellers Table</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 col-sm-8">
+      <%= will_paginate @sellers %>
+    </div>
+    <div class="col-md-4 col-sm-4 newBtn">
+      <%= link_to 'Create a New Seller', new_seller_path, :class=>"btn btn-primary"%>
+    </div>
+  </div>
+</div>
 
-  <tbody>
-    <% @sellers.each do |seller| %>
+
+<div class="table-responsive">
+  <table class="table table-bordered fixed">
+    <thead>
       <tr>
-        <td><%= seller.id %></td>
-        <td><%= seller.seller_type %></td>
-        <td><%= seller.organization_name %></td>
-        <td><%= seller.first_name %></td>
-        <td><%= seller.last_name %></td>
-        <td><%= seller.phone_number %></td>
-        <td><%= seller.address %></td>
-        <td><%= seller.email %></td>
-        <td><%= seller.country_id %></td>
-        <td><%= link_to 'Show', seller %></td>
-        <td><%= link_to 'Edit', edit_seller_path(seller) %></td>
-        <td><%= link_to 'Destroy', seller, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>ID</th>
+        <th>Seller_type</th>
+        <th>Organization_name</th>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>Phone number</th>
+        <th>Address</th>
+        <th>Email</th>
+        <th>Country</th>
+        <th colspan="3">Operations</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
+    <tbody>
+      <% @sellers.each do |seller| %>
+        <tr>
+          <td><%= seller.id %></td>
+          <td><%= seller.seller_type %></td>
+          <td><%= seller.organization_name %></td>
+          <td><%= seller.first_name %></td>
+          <td><%= seller.last_name %></td>
+          <td><%= seller.phone_number %></td>
+          <td><%= seller.address %></td>
+          <td><%= seller.email %></td>
+          <td><%= seller.country_id %></td>
+          <td><%= link_to 'Show', seller %></td>
+          <td><%= link_to 'Edit', edit_seller_path(seller) %></td>
+          <td><%= link_to 'Destroy', seller, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
 <%= will_paginate @sellers %>
 
 

@@ -41,8 +41,13 @@
 </p>
 
 <p>
-  <strong>Country:</strong>
+  <strong>Country ID:</strong>
   <%= @seller.country_id %>
+</p>
+
+<p>
+  <strong>Country Name:</strong>
+  <%= get_country_name @seller.country_id %>
 </p>
 
 <%= link_to 'Edit', edit_seller_path(@seller) %> |

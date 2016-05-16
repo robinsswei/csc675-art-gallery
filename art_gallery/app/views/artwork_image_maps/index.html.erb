@@ -1,33 +1,43 @@
 <p id="notice"><%= notice %></p>
 
-<%= link_to 'New Artwork image map', new_artwork_image_map_path %>
 
-<h1>Listing Artwork Image Maps</h1>
+<h1>Artwork Image Maps Table</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>ID</th>
-      <th>Artwork ID</th>
-      <th>Image ID</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 col-sm-8">
+      <%= will_paginate @artwork_image_maps %>
+    </div>
+    <div class="col-md-4 col-sm-4 newBtn">
+      <%= link_to 'New Artwork image map', new_artwork_image_map_path, :class=>"btn btn-primary"%>
+    </div>
+  </div>
+</div>
 
-  <tbody>
-    <% @artwork_image_maps.each do |artwork_image_map| %>
+<div class="table-responsive">
+  <table class="table table-bordered fixed">
+    <thead>
       <tr>
-        <td><%= artwork_image_map.id %></td>
-        <td><%= artwork_image_map.artwork_id %></td>
-        <td><%= artwork_image_map.image_id %></td>
-        <td><%= link_to 'Show', artwork_image_map %></td>
-        <td><%= link_to 'Edit', edit_artwork_image_map_path(artwork_image_map) %></td>
-        <td><%= link_to 'Destroy', artwork_image_map, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>ID</th>
+        <th>Artwork ID</th>
+        <th>Image ID</th>
+        <th colspan="3">Operations</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @artwork_image_maps.each do |artwork_image_map| %>
+        <tr>
+          <td><%= artwork_image_map.id %></td>
+          <td><%= artwork_image_map.artwork_id %></td>
+          <td><%= artwork_image_map.image_id %></td>
+          <td><%= link_to 'Show', artwork_image_map %></td>
+          <td><%= link_to 'Edit', edit_artwork_image_map_path(artwork_image_map) %></td>
+          <td><%= link_to 'Destroy', artwork_image_map, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
 
-
+<%= will_paginate @artwork_image_maps %>

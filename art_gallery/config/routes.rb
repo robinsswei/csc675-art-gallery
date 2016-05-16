@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
+  root 'artworks#home'
 
-  root 'artworks#index'
-
-  get 'help'  => 'artworks#help'
   get 'about' => 'artworks#about'
+  get 'admin' => 'artworks#admin'
+  get 'help'  => 'artworks#help'
+  get 'index' => 'artworks#index'
 
   resources :artworks
   resources :artwork_image_maps
@@ -13,7 +14,6 @@ Rails.application.routes.draw do
   resources :sellers
   resources :countries
   resources :images
-
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

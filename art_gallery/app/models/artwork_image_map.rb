@@ -2,7 +2,7 @@
 
 class ArtworkImageMap < ActiveRecord::Base
   belongs_to :artwork
-  has_many :images
+  belongs_to :image
 end
 
 # include CsvMapper

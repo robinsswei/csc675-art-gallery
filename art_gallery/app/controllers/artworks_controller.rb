@@ -4,8 +4,7 @@ class ArtworksController < ApplicationController
   # GET /artworks
   # GET /artworks.json
   def index
-    # @artworks = Artwork.all
-    @artworks = Artwork.paginate(:page => params[:page], :per_page => 16)
+    @artworks = Artwork.order("id ASC").paginate(:page => params[:page], :per_page => 5)
   end
 
   # GET /artworks/1
@@ -23,10 +22,11 @@ class ArtworksController < ApplicationController
   def edit
   end
 
-  def help
+  def home
+    @artworks = Artwork.order("id ASC").paginate(:page => params[:page], :per_page => 16)
   end
-
-  def about
+  
+  def admin
   end
   
   # POST /artworks

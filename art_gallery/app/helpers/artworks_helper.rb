@@ -6,12 +6,22 @@ module ArtworksHelper
     image_tag(@img.src, class: "img-responsive")
   end
 
-  # TO-DO
-  def get_artist_name(artwork)
-    @artists = artwork.artists
+  def get_artists(artwork)
+    artwork.artists.each do |artist|
+      return link_to artist.fullname, artist
+    end
+  end
 
-    @artists.each do |artist|
-      fullname = artist.first_name + " , " + artist.last_names
+  def get_sellers(artwork)
+    artwork.sellers.each do |seller|
+      return link_to seller.fullname?, seller
+    end
+  end
+
+  def get_images(artwork)
+    artwork.images.each do |image|
+      return link_to image.id, image
     end
   end
 end
+

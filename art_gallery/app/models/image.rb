@@ -1,7 +1,7 @@
 # require 'csv-mapper'
 
 class Image < ActiveRecord::Base
-	belongs_to :artwork_image_map
+	has_many :artwork_image_maps
 
   validates :src,  presence: true
 end

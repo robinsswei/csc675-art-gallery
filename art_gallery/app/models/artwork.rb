@@ -1,14 +1,14 @@
 # require 'csv-mapper'
 
 class Artwork < ActiveRecord::Base
-  has_many :artwork_artist_map
-  has_many :artists, :through => :artwork_artist_map
+  has_many :artwork_artist_maps
+  has_many :artists, :through => :artwork_artist_maps
 
-  has_many :artwork_seller_map
-  has_many :sellers, :through => :artwork_seller_map
+  has_many :artwork_seller_maps
+  has_many :sellers, :through => :artwork_seller_maps
 
-  has_many :artwork_image_map
-  has_many :images, :through => :artwork_image_map
+  has_many :artwork_image_maps
+  has_many :images, :through => :artwork_image_maps
 end
 
 # include CsvMapper

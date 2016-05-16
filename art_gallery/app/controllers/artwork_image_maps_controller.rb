@@ -4,7 +4,7 @@ class ArtworkImageMapsController < ApplicationController
   # GET /artwork_image_maps
   # GET /artwork_image_maps.json
   def index
-    @artwork_image_maps = ArtworkImageMap.order("id ASC").all
+    @artwork_image_maps = ArtworkImageMap.order("id ASC").paginate(:page => params[:page], :per_page => 10)
   end
 
   # GET /artwork_image_maps/1

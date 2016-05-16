@@ -18,7 +18,7 @@ class SellersControllerTest < ActionController::TestCase
 
   test "should create seller" do
     assert_difference('Seller.count') do
-      post :create, seller: { address: @seller.address, country_id: @seller.country_id, email: @seller.email, first_name: @seller.first_name, last_name: @seller.last_name, organization: @seller.organization, phone_number: @seller.phone_number, type: @seller.type }
+      post :create, seller: { address: @seller.address, country_id: @seller.country_id, email: @seller.email, first_name: @seller.first_name, last_name: @seller.last_name, organization_name: @seller.organization_name, phone_number: @seller.phone_number, seller_type: @seller.seller_type }
     end
 
     assert_redirected_to seller_path(assigns(:seller))
@@ -35,7 +35,7 @@ class SellersControllerTest < ActionController::TestCase
   end
 
   test "should update seller" do
-    patch :update, id: @seller, seller: { address: @seller.address, country_id: @seller.country_id, email: @seller.email, first_name: @seller.first_name, last_name: @seller.last_name, organization: @seller.organization, phone_number: @seller.phone_number, type: @seller.type }
+    patch :update, id: @seller, seller: { address: @seller.address, country_id: @seller.country_id, email: @seller.email, first_name: @seller.first_name, last_name: @seller.last_name, organization_name: @seller.organization_name, phone_number: @seller.phone_number, seller_type: @seller.seller_type }
     assert_redirected_to seller_path(assigns(:seller))
   end
 
