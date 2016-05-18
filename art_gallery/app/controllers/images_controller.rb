@@ -5,7 +5,7 @@ class ImagesController < ApplicationController
   # GET /images.json
   def index
     # @images = Image.order("id ASC").all
-    @images = Image.order("id ASC").paginate(:page => params[:page], :per_page => 15)
+    @images = Image.paginate(:page => params[:page], :per_page => 15)
   end
 
   # GET /images/1

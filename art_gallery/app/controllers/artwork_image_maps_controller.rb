@@ -69,6 +69,6 @@ class ArtworkImageMapsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def artwork_image_map_params
-      params.require(:artwork_image_map).permit(:artwork, :image_id)
+      params.require(:artwork_image_map).permit(:artwork_id, :image_id)
     end
 end

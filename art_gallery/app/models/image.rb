@@ -2,7 +2,7 @@
 
 class Image < ActiveRecord::Base
 	has_many :artwork_image_maps
-
+  default_scope -> { order(id: :ASC) }
   validates :src,  presence: true
 end
 

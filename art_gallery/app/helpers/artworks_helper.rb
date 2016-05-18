@@ -23,5 +23,13 @@ module ArtworksHelper
       return link_to image.id, image
     end
   end
+  
+  def date_mdY(date)
+    if date.nil?
+      ""
+    else
+      date.strftime("%Y-%m-%d")
+    end
+  end
 end
 

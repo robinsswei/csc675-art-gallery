@@ -8,7 +8,7 @@
       <%= will_paginate @artwork_seller_maps %>
     </div>
     <div class="col-md-4 col-sm-4 newBtn">
-      <%= link_to 'New Artwork seller map', new_artwork_seller_path, :class=>"btn btn-primary"%>
+      <%= link_to 'New Artwork Seller Map', new_artwork_seller_map_path, :class=>"btn btn-primary"%>
     </div>
   </div>
 </div>
@@ -38,4 +38,4 @@
     </tbody>
   </table>
 </div>
-
+<%= will_paginate @artwork_seller_maps %>

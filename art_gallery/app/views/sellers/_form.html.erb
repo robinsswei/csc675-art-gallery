@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :seller_type %><br>
-    <%= f.text_field :seller_type %>
+    <%= f.select :seller_type, [ 'Person', 'Organization'], :prompt => 'Select One' %>
   </div>
   <div class="field">
     <%= f.label :organization_name %><br>

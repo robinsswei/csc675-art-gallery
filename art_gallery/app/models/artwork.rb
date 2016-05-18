@@ -1,14 +1,18 @@
 # require 'csv-mapper'
 
 class Artwork < ActiveRecord::Base
-  has_many :artwork_artist_maps
+  has_many :artwork_artist_maps, dependent: :destroy
   has_many :artists, :through => :artwork_artist_maps
 
-  has_many :artwork_seller_maps
+  has_many :artwork_seller_maps, dependent: :destroy
   has_many :sellers, :through => :artwork_seller_maps
 
-  has_many :artwork_image_maps
+  has_many :artwork_image_maps, dependent: :destroy
   has_many :images, :through => :artwork_image_maps
+
+  default_scope -> { order(id: :ASC) }
+  validates :title,  presence: true
+  validates :description,  presence: true
 end
 
 # include CsvMapper

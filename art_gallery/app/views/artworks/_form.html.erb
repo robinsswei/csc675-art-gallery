@@ -20,8 +20,8 @@
     <%= f.text_field :price %>
   </div>
   <div class="field">
-    <%= f.label :date %><br>
-    <%= f.date_select :date %>
+    <%= f.label :date %>(YYYY-MM-DD)<br>
+    <%= f.text_field :date, :value => date_mdY(@artwork.date) %>
   </div>
   <div class="field">
     <%= f.label :description %><br>

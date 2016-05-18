@@ -21,19 +21,19 @@
   </div>
   <div class="field">
     <%= f.label :gender %><br>
-    <%= f.text_field :gender %>
+    <%= f.select :gender, [ 'male', 'female'], :prompt => 'Select One' %>
   </div>
   <div class="field">
     <%= f.label :status %><br>
-    <%= f.text_field :status %>
+    <%= f.select :status, [ 'dead', 'alive'], :prompt => 'Select One' %>
   </div>
   <div class="field">
     <%= f.label :country_id %><br>
     <%= f.text_field :country_id %>
   </div>
   <div class="field">
-    <%= f.label :date_of_birth %><br>
-    <%= f.date_select :date_of_birth %>
+    <%= f.label :date_of_birth %>(YYYY-MM-DD)<br>
+    <%= f.text_field :date_of_birth, :value => date_mdY(@artist.date_of_birth) %>
   </div>
   <div class="field">
     <%= f.label :background %><br>

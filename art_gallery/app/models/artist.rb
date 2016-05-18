@@ -7,13 +7,11 @@ class Artist < ActiveRecord::Base
   has_many :artworks, :through => :artwork_artist_maps
 
   # validation
-  # validates :first_name,  presence: true, length: { maximum: 50 }
-  # validates :last_name,  presence: true, length: { maximum: 50 }
+  validates :first_name,  presence: true, length: { maximum: 50 }
+  validates :last_name,  presence: true, length: { maximum: 50 }
 
-  # enum gender: [:male, :female]
-  # validate :gender, inclusion: { in: Artist.gender.keys }
-  # enum status: [:dead, :alive]
-  # validate :status, inclusion: { in: Artist.status.keys }
+  validates :gender,  presence: true
+  validates :status,  presence: true
 
   # VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   # validates :email, presence: true, length: { maximum: 255 },

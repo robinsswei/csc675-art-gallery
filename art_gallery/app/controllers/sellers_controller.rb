@@ -5,7 +5,7 @@ class SellersController < ApplicationController
   # GET /sellers.json
   def index
     # @sellers = Seller.all
-    @sellers = Seller.order("id ASC").paginate(:page => params[:page], :per_page => 10)
+    @sellers = Seller.paginate(:page => params[:page], :per_page => 10)
   end
 
   # GET /sellers/1
@@ -70,6 +70,6 @@ class SellersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def seller_params
-      params.require(:seller).permit(:type, :organization, :first_name, :last_name, :phone_number, :address, :email, :country_id)
+      params.require(:seller).permit(:seller_type, :organization_name, :first_name, :last_name, :phone_number, :address, :email, :country_id)
     end
 end
