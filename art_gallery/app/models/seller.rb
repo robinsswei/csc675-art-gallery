@@ -3,7 +3,7 @@
 class Seller < ActiveRecord::Base
   has_one :country
 
-  has_many :artwork_artist_maps
+  has_many :artwork_seller_maps, dependent: :destroy
   has_many :artworks, :through => :artwork_seller_maps
 
   default_scope -> { order(id: :ASC) }

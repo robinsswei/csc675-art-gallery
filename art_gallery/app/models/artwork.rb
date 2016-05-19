@@ -9,8 +9,9 @@ class Artwork < ActiveRecord::Base
 
   has_many :artwork_image_maps, dependent: :destroy
   has_many :images, :through => :artwork_image_maps
-
+  
   default_scope -> { order(id: :ASC) }
+  
   validates :title,  presence: true
   validates :description,  presence: true
 end

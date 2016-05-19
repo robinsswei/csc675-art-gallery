@@ -46,6 +46,17 @@
 </p>
 
 <p>
+  <strong>-----------  Associations -----------</strong>
+</p>
+
+<p>
+  <strong>Artworks:</strong>
+  <% @seller.artworks.each do |artwork| %>
+    "<%= link_to artwork.title, artwork %>",
+  <% end %>
+</p>
+
+<p>
   <strong>Country Name:</strong>
   <%= get_country_name @seller.country_id %>
 </p>

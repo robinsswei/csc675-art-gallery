@@ -1,6 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Thumbnail:</strong>
   <%= gravatar_for @artwork %>
 </p>
 
@@ -79,25 +80,37 @@
   <%= @artwork.artwork_image_map_id %>
 </p>
 <br>
-<br>
+
 <p>
   <strong>-----------  Associations -----------</strong>
 </p>
 
 <p>
   <strong>Artists:</strong>
-  <%= get_artists @artwork %>
+  <% @artwork.artists.each do |artist| %>
+    <%= link_to artist.fullname, artist %>,
+  <% end %>
 </p>
 
 <p>
   <strong>Sellers:</strong>
-  <%= get_sellers @artwork %>
+  <% @artwork.sellers.each do |seller| %>
+    <%= link_to seller.fullname?, seller %>,
+  <% end %>
 </p>
 
 <p>
-  <strong>Images:</strong>
-  <%= get_images @artwork %>
+  <strong>Images: </strong>
 </p>
+<% @artwork.images.each do |image| %>
+  <%= link_to image do %>
+    <%= image_tag image.src %>
+  <% end %>
+<% end %>
+
+<br>
+<br>
+
 
 <%= link_to 'Edit', edit_artwork_path(@artwork) %> |
 <%= link_to 'Back', artworks_path %>

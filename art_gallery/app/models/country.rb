@@ -3,6 +3,7 @@
 class Country < ActiveRecord::Base
 	belongs_to :artist
 	belongs_to :seller
+  default_scope -> { order(id: :ASC) }
 end
 
 # include CsvMapper

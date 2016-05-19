@@ -6,6 +6,8 @@ class Artist < ActiveRecord::Base
   has_many :artwork_artist_maps
   has_many :artworks, :through => :artwork_artist_maps
 
+  default_scope -> { order(id: :ASC) }
+  
   # validation
   validates :first_name,  presence: true, length: { maximum: 50 }
   validates :last_name,  presence: true, length: { maximum: 50 }

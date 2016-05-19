@@ -3,6 +3,7 @@
 class ArtworkSellerMap < ActiveRecord::Base
   belongs_to :artwork
   belongs_to :seller
+  default_scope -> { order(id: :ASC) }
 end
 
 # include CsvMapper

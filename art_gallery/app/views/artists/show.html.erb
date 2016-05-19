@@ -54,5 +54,15 @@
   <%= @artist.email %>
 </p>
 
+<p>
+  <strong>---------- Associations -----------</strong>
+</p>
+
+<p>
+  <strong>Artworks:</strong>
+  <% @artist.artworks.each do |artwork| %>
+   "<%= link_to artwork.title, artwork %>",
+  <% end %>
+</p>
 <%= link_to 'Edit', edit_artist_path(@artist) %> |
 <%= link_to 'Back', artists_path %>

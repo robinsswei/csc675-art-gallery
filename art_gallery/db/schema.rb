@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160516201703) do
+ActiveRecord::Schema.define(version: 20160518203640) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 20160516201703) do
   end
 
   add_index "artwork_artist_maps", ["artist_id"], name: "index_artwork_artist_maps_on_artist_id", using: :btree
+  add_index "artwork_artist_maps", ["artwork_id", "artist_id"], name: "index_artwork_artist_maps_on_artwork_id_and_artist_id", unique: true, using: :btree
 
   create_table "artwork_image_maps", force: :cascade do |t|
     t.integer  "artwork_id"
@@ -48,6 +49,7 @@ ActiveRecord::Schema.define(version: 20160516201703) do
     t.datetime "updated_at", null: false
   end
 
+  add_index "artwork_image_maps", ["artwork_id", "image_id"], name: "index_artwork_image_maps_on_artwork_id_and_image_id", unique: true, using: :btree
   add_index "artwork_image_maps", ["image_id"], name: "index_artwork_image_maps_on_image_id", using: :btree
 
   create_table "artwork_seller_maps", force: :cascade do |t|
@@ -57,6 +59,7 @@ ActiveRecord::Schema.define(version: 20160516201703) do
     t.datetime "updated_at", null: false
   end
 
+  add_index "artwork_seller_maps", ["artwork_id", "seller_id"], name: "index_artwork_seller_maps_on_artwork_id_and_seller_id", unique: true, using: :btree
   add_index "artwork_seller_maps", ["seller_id"], name: "index_artwork_seller_maps_on_seller_id", using: :btree
 
   create_table "artworks", force: :cascade do |t|

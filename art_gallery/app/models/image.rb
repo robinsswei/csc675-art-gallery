@@ -1,7 +1,9 @@
 # require 'csv-mapper'
 
 class Image < ActiveRecord::Base
-	has_many :artwork_image_maps
+  has_many :artwork_image_maps, dependent: :destroy
+  has_many :artworks, :through => :artwork_image_maps
+
   default_scope -> { order(id: :ASC) }
   validates :src,  presence: true
 end
